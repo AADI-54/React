@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        //Create element in react takes three arguments
+        //1. type of element
+        //2. props [attributes like ids classes]
+        //3. Content
+        const heading = React.createElement("h1",{id:"heading"},"Hello world from react"); 
+        // react needs to have a root to make changes in dom
+        //this is job of react dom not core react
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        //now we can use this root to make changes in dom
+        //use render method to add this h1
+        root.render(heading);
+        //when we doo create element it creates a js object not h1 element
+        //render takes that object and makes it in understanable form
+        //for the browser ie h1 element
+    </script>
+</body>
+</html>
